@@ -15,6 +15,3 @@ ggplot(long, aes(x = x, y = y)) +
   geom_point() +
   facet_wrap(~dataset, ncol = 2, labeller = label_both)
 ggsave("anscombe_scatter_ggplot.pdf", width = 5, heigh = 3)
-
-write_csv(long, "anscombe_long.csv")
-write_csv(df, "anscombe_wide.csv")
