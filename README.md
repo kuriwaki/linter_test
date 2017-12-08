@@ -1,6 +1,8 @@
 A Linter for Students to Learn Coding Style
 ================
 
+[![Build Status](https://travis-ci.org/kuriwaki/linter_test/?branch=master)](https://travis-ci.org/kuriwaki/linter_test)
+
 This repo tries to create the system mentioned in Matthew Salganik's post, "Rapid feedback on code with lintr" (June 9, 2015), <https://msalganik.wordpress.com/2015/06/09/rapid-feedback-on-code-with-lintr/>
 
 This setup is designed for a potential "programming camp" for students practicing R.
