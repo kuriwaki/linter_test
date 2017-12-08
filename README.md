@@ -1,7 +1,7 @@
 A Linter for Students to Learn Coding Style
 ================
 
-[![Build Status](https://travis-ci.org/kuriwaki/linter_test/?branch=master)](https://travis-ci.org/kuriwaki/linter_test)
+[![Build Status](https://travis-ci.org/kuriwaki/linter_test.svg?branch=master)](https://travis-ci.org/kuriwaki/linter_test)
 
 This repo tries to create the system mentioned in Matthew Salganik's post, "Rapid feedback on code with lintr" (June 9, 2015), <https://msalganik.wordpress.com/2015/06/09/rapid-feedback-on-code-with-lintr/>
 
