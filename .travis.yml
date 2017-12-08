@@ -14,4 +14,4 @@ install:
 
 # Lint
 script: 
-　- ./scripts/travis-linter.sh
+　- ./travis-linter.sh
