@@ -1,3 +1,5 @@
+
+# use c as catch-all language
 language: c
 sudo: required
 
@@ -10,4 +12,6 @@ before_install:
 install:
   - ./travis-tool.sh github_package jimhester/lintr
 
-script: ./scripts/travis-linter.sh
+# Lint
+script: 
+　- ./scripts/travis-linter.sh
