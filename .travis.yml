@@ -1,7 +1,9 @@
 
 # use c as catch-all language
 language: c
-sudo: required
+
+# use containers to speed up (?)
+sudo: false
 
 before_install:
   - curl -OL http://raw.github.com/craigcitro/r-travis/master/scripts/travis-tool.sh
@@ -9,9 +11,29 @@ before_install:
   - ./travis-tool.sh bootstrap
   - git clone https://github.com/kuriwaki/linter_test
 
+# cache local R libraries directory:
+cache:
+  directories:
+    - ~/Rlib
+
+# install the package and dependencies:
+# - create directory for R libraries (if not already exists)
+# - create .Renviron with location of R libraries
+# - define R repository in .Rprofile
+# - add .travis.yml to .Rbuildignore
+# - install devtools if not already installed
+# - install covr if not already installed
+# - update all installed packages
+
 install:
-  - ./travis-tool.sh github_package jimhester/lintr
+  - mkdir -p ~/Rlib
+  - echo 'R_LIBS=~/Rlib' > .Renviron
+  - echo 'options(repos = "http://cran.rstudio.com")' > .Rprofile
+  - echo '.travis.yml' > .Rbuildignore
+  - Rscript -e 'if(!"devtools" %in% rownames(installed.packages())) { install.packages("devtools", dependencies = TRUE) }'
+  - Rscript -e 'if(!"covr" %in% rownames(installed.packages())) { install.packages("covr", dependencies = TRUE) }'
+  - Rscript -e 'update.packages(ask = FALSE, instlib = "~/Rlib")'
 
 # Lint
-script: 
-　- ./travis-linter.sh
+script:
+  - ./travis-linter.sh

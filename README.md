@@ -11,4 +11,5 @@ Repos used
 ==========
 
 -   <https://github.com/jimhester/lintr>
+-   <https://github.com/kjhealy/lintscreen>
 -   <https://github.com/soc504-s2015-princeton/hw4>
