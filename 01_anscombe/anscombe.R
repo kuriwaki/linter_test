@@ -3,7 +3,7 @@ library(readr)
 library(data.table)
 
 df=anscombe
-df$id <- 1:nrow(df)
+df$id = 1:nrow(df)
 
 long <-  melt(as.data.table(df), id.vars = "id", 
               measure.vars = patterns("x", "y"),
