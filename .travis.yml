@@ -2,8 +2,7 @@
 # use c as catch-all language
 language: c
 
-# use containers to speed up (?)
-sudo: false
+sudo: enabled
 
 before_install:
   - curl -OL http://raw.github.com/craigcitro/r-travis/master/scripts/travis-tool.sh
