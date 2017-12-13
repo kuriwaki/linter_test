@@ -12,7 +12,7 @@ long <-  melt(df, id.vars = "id",
               variable.name = "dataset")
 
 library(ggplot2)
-ggplot(long, aes(x = x, y = y)) +
+pp.1 = ggplot(long, aes(x = x, y = y)) +
   geom_point() +
   facet_wrap(~dataset, ncol = 2, labeller = label_both)
 ggsave("anscombe_scatter_ggplot.pdf", width = 5, heigh = 3)
