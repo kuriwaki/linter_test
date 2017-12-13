@@ -1,6 +1,7 @@
 language: r
+cache: packages
 
-sudo: enabled
+sudo: disabled
 
 # cache local R libraries directory:
 cache: packages
