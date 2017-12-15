@@ -1,8 +1,9 @@
 library(datasets)
 library(readr)
 library(data.table)
+library(ggplot2)
 
-df <- anscombe
+df = anscombe
 df$id <- 1:nrow(df)
 df <- as.data.frame(df)
 
@@ -11,7 +12,6 @@ long <-  melt(df, id.vars = "id",
               value.name = c("x", "y"),
               variable.name = "dataset")
 
-library(ggplot2)
 pp.1 <- ggplot(long, aes(x = x, y = y)) +
   geom_point() +
   facet_wrap(~dataset, ncol = 2, labeller = label_both)
