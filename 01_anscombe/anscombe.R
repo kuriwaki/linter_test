@@ -3,7 +3,7 @@ library(readr)
 library(data.table)
 library(ggplot2)
 
-df = anscombe
+df <- anscombe
 df$id <- 1:nrow(df)
 df <- as.data.frame(df)
 
